@@ -70,6 +70,12 @@ va_end(args);
 return (count);
 }
 
+/**
+ * print_number - uses write() to print numbers
+ * @n: number
+ *
+ * Return: number of chars printed
+ */
 int print_number(int n)
 {
   int count = 0;
