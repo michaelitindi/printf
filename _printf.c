@@ -15,9 +15,8 @@ int count;
 char c;
 char *s;
 count = 0;
-
 if (format == NULL)
-	return (0);
+return (0);
 va_start(args, format);
 while (*format)
 {
