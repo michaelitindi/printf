@@ -16,6 +16,8 @@ va_list args;
 int count;
 char c;
 char *s;
+char nullc;
+nullc = '\0';
 count = 0;
 if (format == NULL)
 return (-1);
@@ -48,7 +50,7 @@ count += write(1, &*format, 1);
 }
 format++;
 }
-write(1, '\0', 1);
+write(1, &nullc, 1);
 va_end(args);
 return (count);
 }
