@@ -15,6 +15,9 @@ int count;
 char c;
 char *s;
 count = 0;
+
+if (format == NULL)
+	return (0);
 va_start(args, format);
 while (*format)
 {
@@ -42,7 +45,7 @@ count += write(1, &*format, 1);
 }
 format++;
 }
-write(1,'\0', 1);
+write(1, '\0', 1);
 va_end(args);
 return (count);
 }
