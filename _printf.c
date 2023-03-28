@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 #include "main.h"
 /**
  * _printf - Print formatted output to stdout
@@ -12,6 +13,7 @@ int _printf(const char *format, ...)
 va_list args;
 int count;
 char c;
+char *s;
 count = 0;
 va_start(args, format);
 while (*format)
@@ -20,9 +22,15 @@ if (*format == '%')
 {
 format++;
 if (*format == 'c')
+{
+c = va_arg(args, int);
 count += write(1, &c, 1);
+}
 else if (*format == 's')
-count += write(1, va_arg(args, char *), 1);
+{
+s = va_arg(args, char *);
+count += write(1, s, strlen(s));
+}
 else if (*format == '%')
 count += write(1, "%", 1);
 else
