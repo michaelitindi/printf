@@ -46,7 +46,7 @@ count += write(1, &*format, 1);
 }
 format++;
 }
-write(1, "\0", 1);
+write(1, '\0', 1);
 va_end(args);
 return (count);
 }
