@@ -1,4 +1,4 @@
-#ifndef MAIN_H
+#ifndef MAIN_ H /*TEST*/
 #define MAIN_H
 
 
