@@ -88,6 +88,6 @@ int print_number(int n)
   digit = (n % 10) + '0';
   count += write(1, &digit, 1);
 
-  return count;
+  return (count);
 }
 
