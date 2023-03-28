@@ -1,10 +1,10 @@
-#include <stdarg.h> 
+#include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
 #include "main.h"
 /**
  * _printf - Print formatted output to stdout
- * @format: Format string 
+ * @format: Format string
  * Return: Number of characters printed
  */
 int _printf(const char *format, ...)
