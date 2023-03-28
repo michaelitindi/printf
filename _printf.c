@@ -23,6 +23,8 @@ while (*format)
 if (*format == '%')
 {
 format++;
+if (*format == '\0')
+return (-1);
 if (*format == 'c')
 {
 c = va_arg(args, int);
