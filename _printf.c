@@ -40,7 +40,7 @@ count += write(1, s, strlen(s));
 else if (*format == '%')
 count += write(1, "%", 1);
 else
-return (-1);
+count += write(1, "%", 1) + write(1, &*format, 1);
 }
 else
 {
