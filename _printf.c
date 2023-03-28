@@ -73,15 +73,11 @@ int print_number(int n)
     count += write(1, "-", 1);
     n *= -1;
   }
-
   if (n / 10)
   {
     count += print_number(n / 10);
   }
-
   digit = (n % 10) + '0';
   count += write(1, &digit, 1);
-
   return (count);
 }
-
