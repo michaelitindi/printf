@@ -36,16 +36,10 @@ if (*format == '%')
 		s = va_arg(args, char *);
 		count += write(1, s, strlen(s));
 	}
-	 if (*format == 'i')
+	else if (*format == 'i' || *format == 'd')
 	{
 		i = va_arg(args, int);
-		printf("---TEST--");
 		count += print_number(i);
-	}
-	else if (*format == 'd')
-	{
-		i = va_arg(args, int);
-		count += print_number(i);	
 	}
 	else if (*format == '%')
                 count += write(1, "%", 1);
